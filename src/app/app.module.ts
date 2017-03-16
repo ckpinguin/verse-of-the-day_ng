@@ -6,9 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { ImageViewComponent } from './image-view/image-view.component';
+import { NavigatorComponent } from './navigator/navigator.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImageViewComponent,
+    NavigatorComponent
   ],
   imports: [
     BrowserModule,
