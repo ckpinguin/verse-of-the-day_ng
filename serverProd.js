@@ -3,7 +3,7 @@ require('babel-register');
 import express from 'express';
 
 const app = express();
-const ip = '127.0.0.1';
+const ip = '0.0.0.0';
 const port = 8080;
 
 /* Serve static */
