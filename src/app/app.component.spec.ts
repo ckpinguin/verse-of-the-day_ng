@@ -18,13 +18,13 @@ describe('AppComponent', () => {
 
     it('should create the app', async(() => {
         const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
+        const app: AppComponent = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     }));
 
     it(`should have as title 'Verse of the day'`, async(() => {
         const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
+        const app: AppComponent = fixture.debugElement.componentInstance;
         expect(app.title).toEqual('Verse of the day');
     }));
 
@@ -37,7 +37,7 @@ describe('AppComponent', () => {
 
     it('should initially create a random `date` between 2014-01-01 and today', async(() => {
         const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
+        const app: AppComponent = fixture.componentInstance;
         expect(app.date).toMatch(/201[4-7]-[01][0-9]-\d{2}/);
     }));
 });

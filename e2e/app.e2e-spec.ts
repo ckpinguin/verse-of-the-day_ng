@@ -9,6 +9,6 @@ describe('verse-of-the-day App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ck works!');
+    expect(page.getParagraphText()).toEqual('Verse of the day');
   });
 });
