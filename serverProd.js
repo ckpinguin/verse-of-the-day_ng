@@ -4,7 +4,8 @@ import express from 'express';
 
 const app = express();
 const ip = '0.0.0.0';
-const port = 8080;
+const port = process.env.PORT || '5000';
+//app.set('port', port);
 
 /* Serve static */
 app.use('/', express.static(__dirname + '/dist'));
