@@ -1,5 +1,7 @@
-require('babel-register');
+require('babel-register')({
+	presets: ['es2015']
+});
 //require('css-modules-require-hook/preset');
 
 var env = process.env.NODE_ENV || 'prod';
-var app = require('./serverProd.js');
+require('./serverProd.js');
