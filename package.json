@@ -32,6 +32,7 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "babel-polyfill": "^6.23.0",
     "babel-register": "^6.24.0",
     "core-js": "^2.4.1",
     "cross-env": "^3.2.4",
