@@ -8,15 +8,12 @@ import { AppComponent } from './app.component';
 
 import { ImageViewComponent } from './image-view/image-view.component';
 import { NavigatorComponent } from './navigator/navigator.component';
-import { CircleComponent, DynamicComponentsDemoComponent } from './dynamic-components-demo/dynamic-components-demo.component';
 import { RepeaterDirective } from './repeater/repeater.directive';
 @NgModule({
     declarations: [
         AppComponent,
         ImageViewComponent,
         NavigatorComponent,
-        CircleComponent,
-        DynamicComponentsDemoComponent,
         RepeaterDirective
     ],
     imports: [
@@ -26,7 +23,7 @@ import { RepeaterDirective } from './repeater/repeater.directive';
         AppRoutingModule
     ],
     providers: [],
-    entryComponents: [AppComponent, CircleComponent],
+    entryComponents: [AppComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
