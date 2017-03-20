@@ -9,12 +9,15 @@ import { AppComponent } from './app.component';
 import { ImageViewComponent } from './image-view/image-view.component';
 import { NavigatorComponent } from './navigator/navigator.component';
 import { RepeaterDirective } from './repeater/repeater.directive';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+
 @NgModule({
     declarations: [
         AppComponent,
         ImageViewComponent,
         NavigatorComponent,
-        RepeaterDirective
+        RepeaterDirective,
+        DatePickerComponent
     ],
     imports: [
         BrowserModule,

@@ -1,17 +1,21 @@
-import { Component, Input, OnInit, } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 
 @Component({
     selector: 'ck-image-view',
     templateUrl: './image-view.component.html',
     styleUrls: ['./image-view.component.styl']
 })
-export class ImageViewComponent implements OnInit {
+export class ImageViewComponent implements OnInit, OnChanges {
     @Input() imgUrl: String;
 
     constructor() { }
 
     ngOnInit() {
-        //console.log('url: ' + this.imgUrl);
+        this.imgUrl = 'http://logos.com/media/VerseOfTheDay/768x432/2016-12-27.png';
+    }
+
+    ngOnChanges(changes) {
+
     }
 
 }

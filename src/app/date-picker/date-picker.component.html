@@ -1,0 +1,32 @@
+<div class="datepicker">
+    <div class="col" id="year">
+        <button (click)="incrementDate('year')"> +</button>
+        <input #year [value]="date?.year"
+            (change)="changeDate('year', $event.target.value)"
+            (keydown.arrowup)="incrementDate('year'); $event.preventDefault()"
+            (keydown.arrowdown)="decrementDate('year'); $event.preventDefault()"
+            (keydown.tab)="month.focus(); $event.preventDefault()"
+        />
+        <button (click)="decrementDate('year')"> -</button>
+    </div>
+    <div class="col" id="month">
+        <button (click)="incrementDate('month')"> +</button>
+        <input #month [value]="date?.month"
+            (change)="changeDate('month', $event.target.value)"
+            (keydown.arrowup)="incrementDate('month'); $event.preventDefault()"
+            (keydown.arrowdown)="decrementDate('month'); $event.preventDefault()"
+            (keydown.tab)="day.focus(); $event.preventDefault()"
+        />
+        <button (click)="decrementDate('month')"> -</button>
+    </div>
+    <div class="col" id="day">
+        <button (click)="incrementDate('day')"> +</button>
+        <input #day [value]="date?.day"
+            (change)="changeDate('day', $event.target.value)"
+            (keydown.arrowup)="incrementDate('day'); $event.preventDefault()"
+            (keydown.arrowdown)="decrementDate('day'); $event.preventDefault()"
+            (keydown.tab)="year.focus(); $event.preventDefault()"
+        />
+        <button (click)="decrementDate('day')"> -</button>
+    </div>
+</div>
