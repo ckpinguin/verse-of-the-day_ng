@@ -22,7 +22,8 @@ export class NavigatorComponent {
         ),
         new Date());
     date = DateHelper.formatDate(this.randomDate);
-    url = 'http://logos.com/media/VerseOfTheDay/768x432/' + this.date + '.png';
+    urlBase = 'http://logos.com/media/VerseOfTheDay/768x432/';
+    url = this.urlBase + this.date + '.png';
 
     changeDate(newDate: string) {
         console.log('newDate: ', newDate);
@@ -31,7 +32,7 @@ export class NavigatorComponent {
     }
 
     private updateUrl() {
-        this.url = 'http://logos.com/media/VerseOfTheDay/768x432/' + this.date + '.png';
+        this.url = this.urlBase + this.date + '.png';
     }
 
     constructor() { }
