@@ -8,7 +8,7 @@ export class DateHelper {
     static minValues = {
         day: 1,
         month: 1,
-        year: 2012
+        year: 2014
     };
 
     static randomDate(start: Date, end: Date): Date {
@@ -29,7 +29,7 @@ export class DateHelper {
         const year = date.year;
         const month = DateHelper.zeroFill(date.month);
         const day = DateHelper.zeroFill(date.day);
-        console.log('getDate: ', `${year}.${month}.${day}`);
-        return `${year}.${month}.${day}`;
+        console.log('getDate: ', `${year}-${month}-${day}`);
+        return `${year}-${month}-${day}`;
     }
 }

@@ -11,9 +11,10 @@ export class ImageViewComponent implements OnInit, OnChanges {
     constructor() { }
 
     ngOnInit() {
-        this.imgUrl = 'http://logos.com/media/VerseOfTheDay/768x432/2016-12-27.png';
+        //this.imgUrl = 'http://logos.com/media/VerseOfTheDay/768x432/2016-12-27.png';
     }
 
+    // called, whenever @Input binding changes
     ngOnChanges(changes) {
 
     }

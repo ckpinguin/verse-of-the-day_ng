@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { DatePickerComponent } from '../date-picker/date-picker.component';
 import { ImageViewComponent } from '../image-view/image-view.component';
 import { DateHelper } from '../shared/date.helper';
@@ -8,7 +8,7 @@ import { DateHelper } from '../shared/date.helper';
     templateUrl: './navigator.component.html',
     styleUrls: ['./navigator.component.styl']
 })
-export class NavigatorComponent implements OnInit, OnChanges, AfterViewInit {
+export class NavigatorComponent {
     // template variable variant:
     @ViewChild('datepicker') datePicker: DatePickerComponent;
     // class identifier variant:
@@ -24,16 +24,15 @@ export class NavigatorComponent implements OnInit, OnChanges, AfterViewInit {
     date = DateHelper.formatDate(this.randomDate);
     url = 'http://logos.com/media/VerseOfTheDay/768x432/' + this.date + '.png';
 
+    changeDate(newDate: string) {
+        console.log('newDate: ', newDate);
+        this.date = newDate;
+        this.updateUrl();
+    }
+
+    private updateUrl() {
+        this.url = 'http://logos.com/media/VerseOfTheDay/768x432/' + this.date + '.png';
+    }
+
     constructor() { }
-
-    ngOnInit() {
-    }
-
-    ngOnChanges() {
-
-    }
-
-    ngAfterViewInit() {
-        console.log('DatePicker: ', this.datePicker);
-    }
 }

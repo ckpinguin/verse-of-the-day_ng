@@ -1,2 +1,2 @@
-<ck-date-picker #datepicker [date]="date"></ck-date-picker>
-<ck-image-view [imgUrl]="url"></ck-image-view>
+<ck-date-picker #datepicker [dateString]="date" (dateChange)="changeDate($event)"></ck-date-picker>
+<ck-image-view #imageview [imgUrl]="url"></ck-image-view>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, ViewChild } from '@angular/core';
 import { DateHelper } from '../shared/date.helper';
 
 @Component({
@@ -8,16 +8,16 @@ import { DateHelper } from '../shared/date.helper';
 })
 export class DatePickerComponent implements OnChanges {
     date: any;
-    @Input('date') dateString = '';
+    @Input() dateString;
     @Output() dateChange = new EventEmitter();
 
     constructor() {
-        this.reset();
+        // this.reset();
     }
 
     // called, whenever @Input binding changes
     ngOnChanges(changes) {
-        const parts = this.dateString.split('.');
+        const parts = this.dateString.split('-');
         if (parts.length === 3) {
             this.date = {
                 year: Math.min(parseInt(parts[0], 10), DateHelper.maxValues.year),
@@ -55,7 +55,9 @@ export class DatePickerComponent implements OnChanges {
     }
 
     emitDateChange() {
-        this.dateChange.emit(DateHelper.getFormattedDate(this.date));
+        const formattedDate = DateHelper.getFormattedDate(this.date);
+        console.log('emitting dateChange: ', formattedDate);
+        this.dateChange.emit(formattedDate);
     }
 
     changeDate(field: string, inputValue) {
