@@ -11,25 +11,27 @@ export class DateHelper {
         year: 2014
     };
 
-    static randomDate(start: Date, end: Date): Date {
+    static randomDateBetween(start: Date, end: Date): Date {
         return new Date(start.getTime()
             + Math.random() * (end.getTime() - start.getTime()));
     }
 
+    static getRandomDate() {
+        return DateHelper.randomDateBetween(new Date(
+            DateHelper.minValues['year'],
+            DateHelper.minValues['month'],
+            DateHelper.minValues['day']
+        ),
+        new Date());
+    }
+
     static formatDate(date: Date): string {
+        // console.log('formatDate(): ', date);
         return date.getFullYear() + '-' + DateHelper.zeroFill(date.getMonth() + 1)
             + '-' + DateHelper.zeroFill(date.getDate());
     }
 
     static zeroFill(i: number): string {
         return (i < 10 ? '0' : '') + i;
-    }
-
-    static getFormattedDate(date) {
-        const year = date.year;
-        const month = DateHelper.zeroFill(date.month);
-        const day = DateHelper.zeroFill(date.day);
-        console.log('getDate: ', `${year}-${month}-${day}`);
-        return `${year}-${month}-${day}`;
     }
 }

@@ -6,7 +6,7 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
     styleUrls: ['./image-view.component.styl']
 })
 export class ImageViewComponent implements OnInit, OnChanges {
-    @Input() imgUrl: String;
+    @Input() url: String;
 
     constructor() { }
 

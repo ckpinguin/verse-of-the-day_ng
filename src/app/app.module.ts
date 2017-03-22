@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 
 import { ImageViewComponent } from './image-view/image-view.component';
 import { NavigatorComponent } from './navigator/navigator.component';
-import { RepeaterDirective } from './repeater/repeater.directive';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
         AppComponent,
         ImageViewComponent,
         NavigatorComponent,
-        RepeaterDirective,
         DatePickerComponent
     ],
     imports: [
