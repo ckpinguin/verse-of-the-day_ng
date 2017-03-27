@@ -9,7 +9,7 @@ import { DateHelper } from './shared/date.helper';
 export class AppComponent {
     title = 'Verse of the day';
     date: Date;
-    urlBase = 'http://logos.com/media/VerseOfTheDay/768x432/';
+    urlBase = 'https://logos.com/media/VerseOfTheDay/768x432/';
     url: string;
 
     constructor() {
