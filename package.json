@@ -5,6 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
+    "aot": "ngc -p ./tsconfig-aot.json",
+    "bundle": "rollup -c ./rollup.config.js",
     "build": "ng build",
     "build:prod": "ng build --aot --prod",
     "server:dev": "nodemon server.js",
@@ -28,7 +30,6 @@
     "@angular/http": "^2.4.0",
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
-    "@angular/platform-server": "^4.0.0",
     "@angular/router": "^3.4.0",
     "core-js": "^2.4.1",
     "cross-env": "^3.2.4",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.1",
     "@angular/compiler-cli": "^2.4.0",
+    "@angular/platform-server": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
@@ -53,6 +55,10 @@
     "karma-spec-reporter": "0.0.30",
     "nodemon": "^1.11.0",
     "protractor": "~5.1.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
     "ts-node": "~2.0.0",
     "tslint": "~4.4.2",
     "typescript": "~2.0.0"
