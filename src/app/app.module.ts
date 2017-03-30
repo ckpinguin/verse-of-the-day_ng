@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ImageViewComponent } from './image-view/image-view.component';
 import { NavigatorComponent } from './navigator/navigator.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ImageViewComponent,
         NavigatorComponent,
-        DatePickerComponent
+        DatePickerComponent,
+        LayoutComponent
     ],
     imports: [
         BrowserModule,

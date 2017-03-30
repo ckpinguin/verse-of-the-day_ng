@@ -1,11 +1,13 @@
 <h1>
   {{title}}
 </h1>
-<ck-navigator
-    [date]="date"
-    (dateChange)="changeDate($event)">
-</ck-navigator>
-<ck-image-view
-    [url]="url">
-</ck-image-view>
-<router-outlet></router-outlet>
+<div class="layout">
+    <ck-navigator
+        [date]="date"
+        (dateChange)="changeDate($event)">
+    </ck-navigator>
+    <ck-image-view
+        [url]="url">
+    </ck-image-view>
+    <router-outlet></router-outlet>
+</div>
