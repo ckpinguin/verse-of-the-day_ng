@@ -7,7 +7,7 @@ import { DateHelper } from '../shared/date.helper';
     styleUrls: ['./date-picker.component.styl']
 })
 export class DatePickerComponent implements OnChanges {
-    formDate: any;
+    formDate: any; // no model, just display stuff
     @Input() date: Date;
     @Output() dateChange = new EventEmitter();
 
@@ -15,12 +15,12 @@ export class DatePickerComponent implements OnChanges {
         // this.reset();
     }
 
-    // called, whenever @Input binding changes and also onViewInit
+    // This is the "bottom receiver" component for date, so we want to react on data change here
+    // ngOnChanges is called, whenever @Input binding changes and also onViewInit
     // ...we update the form then
     ngOnChanges(changes) {
         const formattedDate = DateHelper.formatDate(this.date);
         const parts = formattedDate.split('-');
-        // console.log('parts: ', parts);
         if (parts.length === 3) {
             this.formDate = {
                 year: Math.min(parseInt(parts[0], 10), DateHelper.maxValues.year),
@@ -28,10 +28,9 @@ export class DatePickerComponent implements OnChanges {
                 day: Math.min(parseInt(parts[2], 10), DateHelper.maxValues.day)
             };
         }
-        // console.log('formDate: ', this.formDate);
     }
 
-    incrementDate(field: string) {
+    incrementField(field: string) {
         const maxValue = DateHelper.maxValues[field];
         const minValue = DateHelper.minValues[field];
         this.formDate[field] = (this.formDate[field] + 1 > maxValue)
@@ -40,7 +39,7 @@ export class DatePickerComponent implements OnChanges {
         this.emitDateChange();
     }
 
-    decrementDate(field: string) {
+    decrementField(field: string) {
         const maxValue = DateHelper.maxValues[field];
         const minValue = DateHelper.minValues[field];
         this.formDate[field] = (this.formDate[field] - 1 < minValue)

@@ -1,32 +1,20 @@
 <div class="datepicker">
     <div class="col" id="year">
-        <button (click)="incrementDate('year')"> +</button>
-        <input #year [value]="formDate?.year"
-            (change)="changeDate('year', $event.target.value)"
-            (keydown.arrowup)="incrementDate('year'); $event.preventDefault()"
-            (keydown.arrowdown)="decrementDate('year'); $event.preventDefault()"
-            (keydown.tab)="month.focus(); $event.preventDefault()"
+        <button (click)="incrementField('year')"> +</button>
+        <input #year [value]="formDate?.year" (change)="changeDate('year', $event.target.value)" (keydown.arrowup)="incrementField('year'); $event.preventDefault()" (keydown.arrowdown)="decrementField('year'); $event.preventDefault()" (keydown.tab)="month.focus(); $event.preventDefault()"
         />
-        <button (click)="decrementDate('year')"> -</button>
+        <button (click)="decrementField('year')"> -</button>
     </div>
     <div class="col" id="month">
-        <button (click)="incrementDate('month')"> +</button>
-        <input #month [value]="formDate?.month"
-            (change)="changeDate('month', $event.target.value)"
-            (keydown.arrowup)="incrementDate('month'); $event.preventDefault()"
-            (keydown.arrowdown)="decrementDate('month'); $event.preventDefault()"
-            (keydown.tab)="day.focus(); $event.preventDefault()"
+        <button (click)="incrementField('month')"> +</button>
+        <input #month [value]="formDate?.month" (change)="changeDate('month', $event.target.value)" (keydown.arrowup)="incrementField('month'); $event.preventDefault()" (keydown.arrowdown)="decrementField('month'); $event.preventDefault()" (keydown.tab)="day.focus(); $event.preventDefault()"
         />
-        <button (click)="decrementDate('month')"> -</button>
+        <button (click)="decrementField('month')"> -</button>
     </div>
     <div class="col" id="day">
-        <button (click)="incrementDate('day')"> +</button>
-        <input #day [value]="formDate?.day"
-            (change)="changeDate('day', $event.target.value)"
-            (keydown.arrowup)="incrementDate('day'); $event.preventDefault()"
-            (keydown.arrowdown)="decrementDate('day'); $event.preventDefault()"
-            (keydown.tab)="year.focus(); $event.preventDefault()"
+        <button (click)="incrementField('day')"> +</button>
+        <input #day [value]="formDate?.day" (change)="changeDate('day', $event.target.value)" (keydown.arrowup)="incrementField('day'); $event.preventDefault()" (keydown.arrowdown)="decrementField('day'); $event.preventDefault()" (keydown.tab)="year.focus(); $event.preventDefault()"
         />
-        <button (click)="decrementDate('day')"> -</button>
+        <button (click)="decrementField('day')"> -</button>
     </div>
 </div>
