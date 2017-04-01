@@ -12,7 +12,6 @@ export class DatePickerComponent implements OnChanges {
     @Output() dateChange = new EventEmitter();
 
     constructor() {
-        // this.reset();
     }
 
     // This is the "bottom receiver" component for date, so we want to react on data change here

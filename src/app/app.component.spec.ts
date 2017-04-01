@@ -19,7 +19,7 @@ describe('AppComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(AppComponent);
         app = fixture.componentInstance;
-        app.date = DateHelper.getRandomDate(); // Mock input date
+        app.date = DateHelper.getRandomDate(); // Mock date
         fixture.detectChanges();
     });
 
@@ -52,7 +52,4 @@ describe('AppComponent', () => {
         expect(app.date.getTime()).toBeLessThan(maxDate.getTime());
     }));
 
-    it('should decrement date correctly', () => {
-        return true;
-    });
 });

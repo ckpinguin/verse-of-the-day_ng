@@ -32,14 +32,6 @@ export class AppComponent implements OnInit {
         this.updateUrl(formattedDate);
     }
 
-    incrementDate() {
-        return false;
-    }
-
-    decrementDate() {
-        return false;
-    }
-
     private updateUrl(formattedDate: string) {
         this.url = this.urlBase + formattedDate + '.png';
     }

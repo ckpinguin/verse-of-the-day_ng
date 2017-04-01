@@ -27,7 +27,7 @@ export class DateHelper {
 
     static formatDate(date: Date): string {
         // console.log('formatDate(): ', date);
-        return date.getFullYear() + '-' + DateHelper.zeroFill(date.getMonth() + 1)
+        return date.getFullYear() + '-' + DateHelper.zeroFill(date.getMonth() + 1) // month is 0-based!
             + '-' + DateHelper.zeroFill(date.getDate());
     }
 
