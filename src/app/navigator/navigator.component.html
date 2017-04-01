@@ -1,6 +1,7 @@
-<div id="ck-navigator" tabindex="0" (keydown.arrowleft)="decrementDate(); $event.preventDefault()" (keydown.arrowright)="incrementDate(); $event.preventDefault()">
-    <button (click)="decrementDate()" class="fa fa-2x fa-chevron-left"></button>
-    <ck-date-picker [date]="date" (dateChange)="changeDate($event)">
-    </ck-date-picker>
-    <button (click)="incrementDate()" class="fa fa-2x fa-chevron-right"></button>
-</div>
+<button (click)="decrementDate()" class="fa fa-2x fa-chevron-left"></button>
+<button (click)="randomizeDate()" class="fa fa-2x fa-diamond"></button>
+<button (click)="incrementDate()" class="fa fa-2x fa-chevron-right"></button>
+<p>Use arrow keys to go forward/backward</p>
+<ck-date-picker [date]="date" (dateChange)="changeDate($event)">
+</ck-date-picker>
+<button (click)="toggleSlideShow()" class="fa fa-2x fa-play-circle"></button>
